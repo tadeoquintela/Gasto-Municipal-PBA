@@ -86,7 +86,7 @@ select:focus-visible, input:focus-visible, button:focus-visible, summary:focus-v
 .tot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .box { background: var(--panel-2); border-radius: 12px; padding: 12px 14px; display: grid; gap: 4px; min-width: 0; }
 .box .k { font: 700 11px var(--f-display); letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
-.box .big { font: 900 clamp(24px, 4.4vw, 34px)/1.05 var(--f-display); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.box .big { font: 900 clamp(24px, 4.4vw, 34px)/1.05 var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .card { --c: var(--acc); background: var(--panel-2); border-radius: 12px; padding: 14px; display: grid; gap: 6px; align-content: start; border-top: 3px solid var(--c); min-width: 0; }
 .card .k { font: 800 13px var(--f-display); letter-spacing: .8px; text-transform: uppercase; color: var(--c); }
@@ -118,7 +118,9 @@ footer { color: var(--dim); font-size: 13px; display: grid; gap: 6px; }
   .form .chk { grid-column: 1 / -1; padding-bottom: 0; }
   .cards { grid-template-columns: minmax(0, 1fr); }
   section { padding: 14px 12px; }
-  .box .big { font-size: 22px; }
+  .tot { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tot .box { grid-template-columns: auto auto; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 14px; }
+  .box .big { font-size: 22px; } .tot .box .big { font-size: clamp(16px, 5.3vw, 20px); }
 }
 </style>
 </head>
